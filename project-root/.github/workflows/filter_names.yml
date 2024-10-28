@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@8f9f1132c153c8b26e62acb2f872e8073ff3846d  # v3 commit SHA
 
     - name: Set up Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
 
@@ -27,7 +27,7 @@ jobs:
       run: python scripts/filter_names.py
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@2137fa0e904a5e21b7bfae5f17b8f6511c8efc9a  # v3 commit SHA
       with:
         name: filtered_names_pdf
         path: filtered_names.pdf
